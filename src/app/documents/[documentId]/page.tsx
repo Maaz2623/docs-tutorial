@@ -1,4 +1,5 @@
 import React from "react";
+import { Editor } from "./editor";
 
 const DocumentIdPage = async ({
   params,
@@ -7,7 +8,11 @@ const DocumentIdPage = async ({
 }) => {
   const { documentId } = await params;
 
-  return <div>DocumentIdPage: {documentId}</div>;
+  return (
+    <div className="min-h-screen bg-[#FAFBFB]">
+      <Editor />
+    </div>
+  );
 };
 
 export default DocumentIdPage;
