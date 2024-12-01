@@ -239,6 +239,8 @@
     height: auto;
     margin: 1.5rem 0;
     max-width: 100%;
+    border-radius: 8px;
+    @apply shadow-sm;
 
     &.ProseMirror-selectednode {
       outline: 3px solid var(--purple);
@@ -250,5 +252,24 @@
     border-radius: 0.4rem;
     box-decoration-break: clone;
     padding: 0.1rem 0.3rem;
+  }
+
+  /* Code and preformatted text styles */
+  code {
+    background-color: var(--purple-light);
+    border-radius: 0.4rem;
+    color: var(--black);
+    font-size: 0.85rem;
+    padding: 0.25em 0.3em;
+  }
+
+  /* Link styles */
+  a {
+    @apply text-blue-600;
+    cursor: pointer;
+
+    &:hover {
+      @apply underline;
+    }
   }
 }

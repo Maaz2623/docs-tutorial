@@ -16,6 +16,7 @@ import TextStyle from "@tiptap/extension-text-style";
 import TableRow from "@tiptap/extension-table-row";
 import Image from "@tiptap/extension-image";
 import ImageResize from "tiptap-extension-resize-image";
+import Link from "@tiptap/extension-link";
 import { useEditorStore } from "@/store/use-editor-store";
 
 export const Editor = () => {
@@ -74,6 +75,11 @@ export const Editor = () => {
       Color,
       Highlight.configure({
         multicolor: true,
+      }),
+      Link.configure({
+        openOnClick: false,
+        autolink: true,
+        defaultProtocol: "https",
       }),
     ],
     content: `Hello World`,
