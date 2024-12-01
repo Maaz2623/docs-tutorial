@@ -8,6 +8,8 @@ import Table from "@tiptap/extension-table";
 import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import Underline from "@tiptap/extension-underline";
+import Highlight from "@tiptap/extension-highlight";
+import { Color } from "@tiptap/extension-color";
 import FontFamily from "@tiptap/extension-font-family";
 import Text from "@tiptap/extension-text";
 import TextStyle from "@tiptap/extension-text-style";
@@ -69,6 +71,10 @@ export const Editor = () => {
       FontFamily,
       Text,
       TextStyle,
+      Color,
+      Highlight.configure({
+        multicolor: true,
+      }),
     ],
     content: `Hello World`,
   });
