@@ -8,6 +8,9 @@ import Table from "@tiptap/extension-table";
 import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import Underline from "@tiptap/extension-underline";
+import FontFamily from "@tiptap/extension-font-family";
+import Text from "@tiptap/extension-text";
+import TextStyle from "@tiptap/extension-text-style";
 import TableRow from "@tiptap/extension-table-row";
 import Image from "@tiptap/extension-image";
 import ImageResize from "tiptap-extension-resize-image";
@@ -63,6 +66,9 @@ export const Editor = () => {
       Image,
       ImageResize,
       Underline,
+      FontFamily,
+      Text,
+      TextStyle,
     ],
     content: `Hello World`,
   });
