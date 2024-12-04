@@ -10,10 +10,10 @@ export const Navbar = () => {
         <Link href={`/`}>
           <Image src={`/logo.svg`} alt="logo" width={36} height={36} />
         </Link>
-        <h3 className="text-3xl">Docs</h3>
+        <h3 className="text-3xl font-semibold">Docs</h3>
       </div>
       <SearchInput />
-      <div /> 
+      <div />
     </nav>
   );
 };
