@@ -14,7 +14,10 @@ export const Navbar = () => {
         <h3 className="text-3xl font-semibold">Docs</h3>
       </div>
       <SearchInput />
+      <div className="flex gap-3 items-center">
+
       <UserButton />
+      </div>
     </nav>
   );
 };
