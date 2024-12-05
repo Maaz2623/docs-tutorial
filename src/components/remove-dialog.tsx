@@ -14,6 +14,7 @@ import { Id } from "../../convex/_generated/dataModel";
 import { useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 interface RemoveDialogProps {
   documentId: Id<"documents">;
@@ -45,7 +46,16 @@ export const RemoveDialog = ({ documentId, children }: RemoveDialogProps) => {
             onClick={(e) => {
               e.stopPropagation();
               setIsRemoving(true);
-              remove({ id: documentId }).finally(() => setIsRemoving(false));
+              // Call the mutation and pass the returned Promise to `toast.promise`
+              const promise = remove({ id: documentId });
+
+              toast.promise(promise, {
+                loading: "Removing...",
+                success: "Removed successfully!",
+                error: "Error removing the document.",
+              });
+
+              promise.finally(() => setIsRemoving(false));
             }}
           >
             Delete
