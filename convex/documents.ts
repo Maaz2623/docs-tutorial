@@ -2,6 +2,15 @@ import { ConvexError, v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 import { paginationOptsValidator } from "convex/server";
 
+export const getById = query({
+  args: {
+    id: v.id("documents"),
+  },
+  handler: async (ctx, { id }) => {
+    return await ctx.db.get(id);
+  },
+});
+
 export const updateById = mutation({
   args: { id: v.id("documents"), title: v.string() },
   handler: async (ctx, args) => {
