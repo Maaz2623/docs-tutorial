@@ -49,13 +49,17 @@ export const RemoveDialog = ({ documentId, children }: RemoveDialogProps) => {
               // Call the mutation and pass the returned Promise to `toast.promise`
               const promise = remove({ id: documentId });
 
-              toast.promise(promise, {
-                loading: "Removing...",
-                success: "Removed successfully!",
-                error: "Error removing the document.",
+              promise.then(() => {
+                toast.promise(promise, {
+                  loading: "Removing...",
+                  success: "Removed successfully!",
+                  error: "Error removing the document.",
+                });
               });
 
-              promise.finally(() => setIsRemoving(false));
+              promise.finally(() => {
+                setIsRemoving(false);
+              });
             }}
           >
             Delete
