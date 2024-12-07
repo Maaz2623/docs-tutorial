@@ -19,7 +19,7 @@ const ErrorPage = ({
             <AlertTriangleIcon className="size-10 text-rose-600" />
           </div>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 text-center">
           <h2 className="text-lg font-semibold text-gray-900">
             Something went wrong
           </h2>
