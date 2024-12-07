@@ -274,11 +274,6 @@
   }
 }
 
-/* For mobile */
-.floating-threads {
-  display: none;
-}
-
 /* For desktop */
 .anchored-threads {
   display: block;
