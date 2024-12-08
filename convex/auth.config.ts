@@ -1,7 +1,7 @@
 export default {
   providers: [
     {
-      domain: "https://full-catfish-59.clerk.accounts.dev",
+      domain: "https://huge-elk-39.clerk.accounts.dev",
       applicationID: "convex",
     },
   ],

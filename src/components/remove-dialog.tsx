@@ -42,6 +42,7 @@ export const RemoveDialog = ({ documentId, children }: RemoveDialogProps) => {
             Cancel
           </AlertDialogCancel>
           <AlertDialogAction
+            className="bg-red-600 hover:bg-red-600/80"
             disabled={isRemoving}
             onClick={(e) => {
               e.stopPropagation();

@@ -128,7 +128,7 @@ export const Navbar = ({ data }: NavbarProps) => {
     <nav className="flex items-center justify-between">
       <div className="flex gap-2 items-center">
         <Link href={`/`}>
-          <Image src={`/logo.svg`} alt="logo" width={36} height={36} />
+          <Image src={`/logo.png`} alt="logo" width={36} height={36} />
         </Link>
         <div className="flex flex-col">
           <DocumentInput title={data.title} id={data._id} />
@@ -166,7 +166,7 @@ export const Navbar = ({ data }: NavbarProps) => {
 
                   <MenubarItem onClick={onNewDocument}>
                     <FilePlusIcon className="size-4 mr-2" />
-                    New Document
+                    New Memory
                   </MenubarItem>
                   <MenubarSeparator />
                   <RenameDialog documentId={data._id} initialTitle={data.title}>
