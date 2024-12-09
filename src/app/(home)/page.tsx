@@ -24,7 +24,7 @@ const HomePage = () => {
       <div className="mt-16">
         <TemplateGallery />
         <DocumentsTable
-          documents={results}
+          documents={results.reverse()}
           loadMore={loadMore}
           status={status}
         />
