@@ -124,6 +124,7 @@ export const get = query({
     if (search && organizationId) {
       return await ctx.db
         .query("documents")
+
         .withSearchIndex("search_title", (q) =>
           q.search("title", search).eq("organizationId", organizationId)
         )
